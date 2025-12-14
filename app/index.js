@@ -29,7 +29,7 @@ const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 // Load system prompt from file
 const loadSystemPrompt = () => {
-  const systemPromptPath = path.join(__dirname, 'system.md');
+  const systemPromptPath = path.join(__dirname, '..', 'assets', 'system.md');
   try {
     return fs.readFileSync(systemPromptPath, 'utf-8');
   } catch (error) {
